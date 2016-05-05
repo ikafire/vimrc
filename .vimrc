@@ -26,6 +26,9 @@ Plugin 'scrooloose/nerdtree'
 " make nerdtree works better with tabs
 Plugin 'jistr/vim-nerdtree-tabs'
 
+" git wrapper
+Plugin 'tpope/vim-fugitive'
+
 " Solarized color scheme
 Plugin 'altercation/vim-colors-solarized'
 
