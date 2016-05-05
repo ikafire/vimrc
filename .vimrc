@@ -42,8 +42,10 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 
-" better search
+" search when typing
 set hlsearch
+
+" highlight search results
 set incsearch
 
 " show cursor position in the bottom
@@ -56,11 +58,7 @@ set mouse=a
 set number
 
 " tab handling shortcuts
-map  <C-c> :tabnew<CR>
-imap <C-c> <ESC>:tabnew<CR>
-map  <C-k> :tabclose<CR>
 map  <C-p> :tabprev<CR>
-imap <C-p> <ESC>:tabprev<CR>
 map  <C-n> :tabnext<CR>
 
 " Plugin settings
