@@ -17,6 +17,12 @@ Plugin 'VundleVim/Vundle.vim'
 " better python support
 Plugin 'klen/python-mode'
 
+" auto-complete
+Plugin 'Valloric/YouCompleteMe'
+
+" file browser
+Plugin 'scrooloose/nerdtree'
+
 " Solarized color scheme
 Plugin 'altercation/vim-colors-solarized'
 
@@ -66,8 +72,8 @@ set mouse=a
 set number
 
 " tab handling shortcuts
-map  <C-p> :tabprev<CR>
-map  <C-n> :tabnext<CR>
+nmap <C-p> :tabprev<CR>
+nmap <C-n> :tabnext<CR>
 
 " Plugin settings
 " ===============
@@ -78,3 +84,12 @@ map  <C-n> :tabnext<CR>
 let g:pymode_rope = 0
 " disable folding on start
 let g:pymode_folding = 0
+
+" Nerd Tree
+" ---------
+" move panel to the right side
+let g:NERDTreeWinPos = "right"
+" set <leader>f as toggle key
+nnoremap <Leader>f :NERDTreeToggle<CR>
+" close vim when only nerd tree is open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
