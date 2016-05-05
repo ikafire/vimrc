@@ -17,6 +17,9 @@ Plugin 'VundleVim/Vundle.vim'
 " better python support
 Plugin 'klen/python-mode'
 
+" Solarized color scheme
+Plugin 'altercation/vim-colors-solarized'
+
 " end of plugin list
 " ------------------
 
@@ -26,7 +29,12 @@ filetype plugin indent on
 " General Vim settings
 " ====================
 
-syntax on
+syntax enable
+
+" use Solarized dark background
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
 
 " set column indicator
 set colorcolumn=80
