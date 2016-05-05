@@ -23,6 +23,9 @@ Plugin 'Valloric/YouCompleteMe'
 " file browser
 Plugin 'scrooloose/nerdtree'
 
+" make nerdtree works better with tabs
+Plugin 'jistr/vim-nerdtree-tabs'
+
 " Solarized color scheme
 Plugin 'altercation/vim-colors-solarized'
 
@@ -89,7 +92,8 @@ let g:pymode_folding = 0
 " ---------
 " move panel to the right side
 let g:NERDTreeWinPos = "right"
+
+" Nerd Tree Tabs
+" --------------
 " set <leader>f as toggle key
-nnoremap <Leader>f :NERDTreeToggle<CR>
-" close vim when only nerd tree is open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+nnoremap <Leader>f :NERDTreeTabsToggle<CR>
