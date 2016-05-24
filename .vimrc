@@ -77,6 +77,9 @@ set mouse=a
 " show line number
 set number
 
+" spell-checking
+set spell spelllang=en_us
+
 " tab handling shortcuts
 nmap <C-p> :tabprev<CR>
 nmap <C-n> :tabnext<CR>
