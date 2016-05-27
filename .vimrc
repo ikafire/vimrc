@@ -29,8 +29,14 @@ Plugin 'tpope/vim-fugitive'
 " better commenting mechanism
 Plugin 'scrooloose/nerdcommenter'
 
+" syntax checker
+Plugin 'scrooloose/syntastic'
+
 " Solarized color scheme
 Plugin 'altercation/vim-colors-solarized'
+
+" better text traversing
+Plugin 'easymotion/vim-easymotion'
 
 " end of plugin list
 " ------------------
@@ -103,3 +109,14 @@ nnoremap <Leader>f :NERDTreeTabsToggle<CR>
 let g:NERDDefaultAlign = 'left'
 " add one space after delimiters
 let g:NERDSpaceDelims = 1
+
+" Syntastic
+" ---------
+" recommended default settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
