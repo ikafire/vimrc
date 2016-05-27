@@ -14,9 +14,6 @@ call vundle#begin()
 " let Vundle manage itself
 Plugin 'VundleVim/Vundle.vim'
 
-" better python support
-Plugin 'klen/python-mode'
-
 " auto-complete
 Plugin 'Valloric/YouCompleteMe'
 
@@ -28,6 +25,9 @@ Plugin 'jistr/vim-nerdtree-tabs'
 
 " git wrapper
 Plugin 'tpope/vim-fugitive'
+
+" better commenting mechanism
+Plugin 'scrooloose/nerdcommenter'
 
 " Solarized color scheme
 Plugin 'altercation/vim-colors-solarized'
@@ -87,13 +87,6 @@ nmap <C-n> :tabnext<CR>
 " Plugin settings
 " ===============
 
-" pythom-mode
-" -----------
-" disable rope to avoid freezing
-let g:pymode_rope = 0
-" disable folding on start
-let g:pymode_folding = 0
-
 " Nerd Tree
 " ---------
 " move panel to the right side
@@ -103,3 +96,10 @@ let g:NERDTreeWinPos = "right"
 " --------------
 " set <leader>f as toggle key
 nnoremap <Leader>f :NERDTreeTabsToggle<CR>
+
+" Nerd Commenter
+" --------------
+" let comment delimiters left-aligned
+let g:NERDDefaultAlign = 'left'
+" add one space after delimiters
+let g:NERDSpaceDelims = 1
