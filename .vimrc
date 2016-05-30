@@ -38,6 +38,9 @@ Plugin 'altercation/vim-colors-solarized'
 " better text traversing
 Plugin 'easymotion/vim-easymotion'
 
+" better status line
+Plugin 'itchyny/lightline.vim'
+
 " end of plugin list
 " ------------------
 
@@ -73,9 +76,6 @@ set hlsearch
 
 " highlight search results
 set incsearch
-
-" show cursor position in the bottom
-set ruler
 
 " enable mouse
 set mouse=a
@@ -120,3 +120,14 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" lightline
+" ---------
+let g:lightline = {
+            \'colorscheme': 'solarized_dark',
+            \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
+            \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
+            \ }
+" always display status line
+set laststatus=2
+set noshowmode
