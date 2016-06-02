@@ -41,6 +41,12 @@ Plugin 'easymotion/vim-easymotion'
 " better status line
 Plugin 'itchyny/lightline.vim'
 
+" avoid auto indenting when pasting
+Plugin 'ConradIrwin/vim-bracketed-paste'
+
+" PlantUML syntax
+Plugin 'aklt/plantuml-syntax'
+
 " end of plugin list
 " ------------------
 
@@ -130,4 +136,8 @@ let g:lightline = {
             \ }
 " always display status line
 set laststatus=2
-set noshowmode
+
+" fzf
+" ---
+" add fzf repository to runtime path
+set rtp+=~/.fzf
