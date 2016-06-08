@@ -47,6 +47,9 @@ Plugin 'ConradIrwin/vim-bracketed-paste'
 " PlantUML syntax
 Plugin 'aklt/plantuml-syntax'
 
+" some nice command mappings
+Plugin 'tpope/vim-unimpaired'
+
 " end of plugin list
 " ------------------
 
@@ -95,6 +98,9 @@ set spell spelllang=en_us
 " tab handling shortcuts
 nmap <C-p> :tabprev<CR>
 nmap <C-n> :tabnext<CR>
+
+" remove search pattern with BS
+nnoremap <silent> <BS> :let @/=""<CR>
 
 " Plugin settings
 " ===============
