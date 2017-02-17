@@ -92,8 +92,18 @@ set mouse=a
 " show line number
 set number
 
+" set font and encoding for gVim
+if has("gui_running") && has("win32")
+    set encoding=utf8
+    set langmenu=en_US.UTF-8
+    let $LANG = 'en_US.UTF-8'
+    source $VIMRUNTIME/delmenu.vim
+    source $VIMRUNTIME/menu.vim
+    set guifont=Consolas:h11
+endif
+
 " spell-checking
-set spell spelllang=en_us
+" set spell spelllang=en_us
 
 " tab handling shortcuts
 nmap <C-p> :tabprev<CR>
@@ -146,6 +156,8 @@ let g:NERDTreeWinPos = "right"
 " --------------
 " set <leader>f as toggle key
 nnoremap <Leader>f :NERDTreeTabsToggle<CR>
+" don't open on gui startup
+let g:nerdtree_tabs_open_on_gui_startup = 2
 
 " Nerd Commenter
 " --------------
@@ -168,9 +180,7 @@ let g:syntastic_check_on_wq = 0
 " lightline
 " ---------
 let g:lightline = {
-            \'colorscheme': 'solarized_dark',
-            \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
-            \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
+            \'colorscheme': 'solarized_dark'
             \ }
 " always display status line
 set laststatus=2
