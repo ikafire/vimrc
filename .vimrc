@@ -62,9 +62,12 @@ filetype plugin indent on
 syntax enable
 
 " use Solarized dark background
-set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
+" Use try to handle when solarized not found
+try
+    set background=dark
+    let g:solarized_termcolors=256
+    colorscheme solarized
+endtry
 
 " set column indicator
 set colorcolumn=80
@@ -179,9 +182,9 @@ let g:syntastic_check_on_wq = 0
 
 " lightline
 " ---------
-let g:lightline = {
-            \'colorscheme': 'solarized_dark'
-            \ }
+" let g:lightline = {
+"             \'colorscheme': 'solarized_dark'
+"             \ }
 " always display status line
 set laststatus=2
 
